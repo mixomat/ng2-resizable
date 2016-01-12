@@ -1,0 +1,21 @@
+$color0: #ffffff;
+$color1: #343e3d;
+$color2: #607466;
+$color3: #aedcc0;
+$color4: #7bd389;
+$color5: #38e4ae;
+
+@import url("//fonts.googleapis.com/css?family=Lato:400,300,700");
+
+body {
+    color: $color0;
+    font-family: 'Lato', sans-serif;
+}
+
+nav {
+    background: $color1;
+    width: 260px;
+    max-width: 300px;
+    min-width: 165px;
+    min-height: 300px;
+}

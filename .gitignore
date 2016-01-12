@@ -1,0 +1,13 @@
+node_modules
+npm-debug.log
+
+Thumbs.db
+.DS_Store
+.idea/
+
+# Ignored files
+*.js
+*.map
+*.d.ts
+
+!webpack.config.js
