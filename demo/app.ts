@@ -7,16 +7,15 @@ import './app.scss';
     selector: 'app',
     directives: [Resizable],
     template: `
-    <section id="sidebar" resizable="right">
+    <section id="sidebar" [resizable]="['right', 'bottom']">
         <h2>Sidebar</h2>
     </section>
-    <section id="main" resizable="right">
+    <section id="main" [resizable]="['bottom']">
         <h2>Main Content</h2>
     </section>
     `
 })
 export class ExampleApp {
-
     constructor() {
         console.log('Example App started...');
     }
