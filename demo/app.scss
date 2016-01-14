@@ -10,12 +10,25 @@ $color5: #38e4ae;
 body {
     color: $color0;
     font-family: 'Lato', sans-serif;
+    text-align: center;
 }
 
-nav {
+#sidebar {
+    display: block;
     background: $color1;
     width: 260px;
     max-width: 300px;
     min-width: 165px;
     min-height: 300px;
+    float: left;
+    text-align: center;
+}
+
+#main {
+    display: block;
+    background: $color4;
+    width: 500px;
+    height: 300px;
+    margin-left: 14px;
+    float: left;
 }

@@ -7,10 +7,13 @@ import './app.scss';
     selector: 'app',
     directives: [Resizable],
     template: `
-    <nav resizable="right">
-        <h2>Sidebar Navigation</h2>
-
-    </nav>`
+    <section id="sidebar" resizable="right">
+        <h2>Sidebar</h2>
+    </section>
+    <section id="main" resizable="right">
+        <h2>Main Content</h2>
+    </section>
+    `
 })
 export class ExampleApp {
 
