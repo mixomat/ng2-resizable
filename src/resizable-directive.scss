@@ -1,0 +1,41 @@
+.resizable {
+  position: relative;
+
+  .grabber {
+    display: block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    position: absolute;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: transparent;
+
+    &:after {
+      content: '';
+      position: absolute;
+      display: block;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+    }
+
+    &.right {
+      cursor: col-resize;
+      height: 100%;
+      right: 0;
+      top: 0;
+      margin-right: -14px;
+
+      &:after {
+        border-width: 0 1px;
+        top: 50%;
+        margin: -10px 0 0 3.5px;
+        height: 20px;
+        width: 7px;
+      }
+    }
+  }
+}

@@ -7,7 +7,7 @@ import './app.scss';
     selector: 'app',
     directives: [Resizable],
     template: `
-    <nav resizable>
+    <nav resizable="right">
         <h2>Sidebar Navigation</h2>
 
     </nav>`
