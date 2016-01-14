@@ -5,7 +5,7 @@ var sourcePath = __dirname;
 
 module.exports = {
   // misc configuration
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
   debug: true,
 
   context: sourcePath,
