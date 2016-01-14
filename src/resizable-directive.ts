@@ -1,4 +1,4 @@
-import {ElementRef, Renderer, Input, Component, OnInit, } from 'angular2/core';
+import {ElementRef, Renderer, Input, Component, OnInit} from 'angular2/core';
 import {NgClass, NgFor} from "angular2/common";
 import './resizable-directive.scss';
 
@@ -38,6 +38,13 @@ export class Resizable implements OnInit {
         this.width = this.element.nativeElement.clientWidth;
         this.height = this.element.nativeElement.clientHeight;
 
+        if (event.stopPropagation)
+            event.stopPropagation();
+        if (event.preventDefault)
+            event.preventDefault();
+        event.cancelBubble = true;
+        event.returnValue = false;
+
         console.log("starting resize: ", this.direction, this.start);
     }
 
@@ -52,10 +59,8 @@ export class Resizable implements OnInit {
     private onResize(event:MouseEvent) {
         if (this.direction) {
             let offset = this.isHorizontalResize(this.direction) ? this.start - this.getClientX(event) : this.start - this.getClientY(event);
+            console.log('offset', offset);
             switch (this.direction) {
-                case 'top':
-                    this.renderer.setElementStyle(this.element, 'height', this.height + offset + 'px');
-                    break;
                 case 'bottom':
                     this.renderer.setElementStyle(this.element, 'height', this.height - offset + 'px');
                     break;
@@ -74,14 +79,18 @@ export class Resizable implements OnInit {
         return direction === 'left' || direction === 'right';
     };
 
-    // TODO handle TouchEvent as well
-    private getClientX(event:MouseEvent) {
-        return event.clientX;
+    private getClientX(event:MouseEvent|TouchEvent) {
+        if (event instanceof TouchEvent)
+            return (<TouchEvent>event).touches[0].clientX
+        else
+            return (<MouseEvent>event).clientX;
     };
 
-    // TODO handle TouchEvent as well
-    private getClientY(event:MouseEvent) {
-        return event.clientY;
+    private getClientY(event:MouseEvent|TouchEvent) {
+        if (event instanceof TouchEvent)
+            return (<TouchEvent>event).touches[0].clientY;
+        else
+            return (<MouseEvent>event).clientY;
     };
 
 }

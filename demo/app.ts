@@ -10,7 +10,7 @@ import './app.scss';
     <section id="sidebar" [resizable]="['right', 'bottom']">
         <h2>Sidebar</h2>
     </section>
-    <section id="main" [resizable]="['bottom']">
+    <section id="main" [resizable]="['bottom', 'left']">
         <h2>Main Content</h2>
     </section>
     `
