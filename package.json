@@ -4,6 +4,7 @@
   "description": "Angular 2 component for resizable containers",
   "author": "Marc Weinberger",
   "license": "MIT",
+  "repository": "https://github.com/mixomat/ng2-resizable",
   "main": "ng2-resizable.js",
   "typings": "ng2-resizable.d.ts",
   "scripts": {
