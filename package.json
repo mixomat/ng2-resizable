@@ -5,41 +5,42 @@
   "author": "Marc Weinberger",
   "license": "MIT",
   "main": "ng2-resizable.js",
-  "typings": "./ng2-resizable.d.ts",
+  "typings": "ng2-resizable.d.ts",
   "scripts": {
-    "build": "tsc",
-    "demo": "webpack-dev-server --config demo/webpack.config.js --inline --colors --port 3000",
-    "test": "tsc && karma start"
+    "clean": "rimraf lib/",
+    "sass": "node-sass -q --output-style expanded src/resizable.scss lib/resizable.css",
+    "prebuild": "npm run clean && npm run sass",
+    "build": "tsc -p src"
   },
   "keywords": [
     "angular",
     "angular2",
     "directive",
+    "component",
     "resize"
   ],
-  "dependencies": {
-    "angular2": "2.0.0-beta.0",
-    "es6-promise": "^3.0.2",
-    "es6-shim": "^0.33.3",
-    "reflect-metadata": "0.1.2",
-    "rxjs": "5.0.0-beta.0",
-    "zone.js": "0.5.10"
+  "peerDependencies": {
+    "angular2": "~2.0.0-beta.0",
+    "es6-promise": "~3.0.2",
+    "es6-shim": "~0.33.3",
+    "reflect-metadata": "~0.1.2",
+    "rxjs": "~5.0.0-beta.0",
+    "zone.js": "~0.5.10"
   },
   "devDependencies": {
-    "css-loader": "^0.23.1",
-    "html-webpack-plugin": "^1.7.0",
     "karma": "^0.13.11",
     "karma-coverage": "^0.5.2",
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.1",
-    "karma-sourcemap-loader": "^0.3.6",
-    "karma-webpack": "^1.7.0",
     "node-sass": "^3.4.2",
-    "sass-loader": "^3.1.2",
-    "style-loader": "^0.13.0",
-    "ts-loader": "^0.7.2",
-    "typescript": "1.7.3",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "rimraf": "^2.5.0",
+    "typescript": "^1.7.5",
+
+    "angular2": "~2.0.0-beta.0",
+    "es6-promise": "~3.0.2",
+    "es6-shim": "~0.33.3",
+    "reflect-metadata": "~0.1.2",
+    "rxjs": "~5.0.0-beta.0",
+    "zone.js": "~0.5.10"
   }
 }

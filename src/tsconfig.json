@@ -1,17 +1,14 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
     "target": "ES5",
+    "module": "commonjs",
+    "moduleResolution": "node",
     "noImplicitAny": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "declaration": true
-  },
-  "files": [
-    "ng2-resizable.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "declaration": true,
+    "removeComments": true,
+    "outDir": "../lib"
+  }
 }

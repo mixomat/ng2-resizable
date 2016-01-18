@@ -1,6 +1,5 @@
 import {ElementRef, Renderer, Input, Component, OnInit} from 'angular2/core';
 import {NgClass, NgFor} from "angular2/common";
-import './resizable-directive.scss';
 
 @Component({
     selector: '[resizable]',
@@ -9,6 +8,7 @@ import './resizable-directive.scss';
         '(document:mouseup)': 'onResizeEnd($event)',
     },
     directives: [NgClass, NgFor],
+    styleUrls: ['resizable.css'],
     template: `
         <ng-content></ng-content>
         <div class=grabber [ngClass]="dir" *ngFor="#dir of directions" (mousedown)="onResizeStart($event, dir)"></div>
