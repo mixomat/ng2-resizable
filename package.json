@@ -1,6 +1,6 @@
 {
   "name": "ng2-resizable",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Angular 2 directive for resizable containers",
   "author": "Marc Weinberger",
   "license": "MIT",
