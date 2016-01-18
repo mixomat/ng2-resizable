@@ -4,5 +4,3 @@ npm-debug.log
 .DS_Store
 .idea/
 lib/
-demo/*.js
-!demo/webpack.config.js

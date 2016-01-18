@@ -1,1 +1,1 @@
-exports.Resizable = require('./lib/resizable-directive').Resizable;
+exports.Resizable = require('./lib/resizable').Resizable;
