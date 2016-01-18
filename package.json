@@ -1,6 +1,6 @@
 {
   "name": "ng2-resizable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Angular 2 directive for resizable containers",
   "author": "Marc Weinberger",
   "license": "MIT",
@@ -35,7 +35,6 @@
     "node-sass": "^3.4.2",
     "rimraf": "^2.5.0",
     "typescript": "^1.7.5",
-
     "angular2": "~2.0.0-beta.0",
     "es6-promise": "~3.0.2",
     "es6-shim": "~0.33.3",
