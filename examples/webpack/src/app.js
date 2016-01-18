@@ -19,8 +19,8 @@ var ExampleApp = (function () {
         core_1.Component({
             selector: 'app',
             directives: [ng2_resizable_1.Resizable],
-            styles: ["\n        @import url(\"//fonts.googleapis.com/css?family=Lato:400,300,700\");\n\n        body {\n          color: #ffffff;\n          font-family: 'Lato', sans-serif;\n          text-align: center;\n        }\n\n        #sidebar {\n          display: block;\n          background: #51BBFE;\n          width: 260px;\n          max-width: 500px;\n          min-width: 165px;\n          min-height: 300px;\n          margin-right: 15px;\n          float: left;\n        }\n\n        #main {\n          display: block;\n          background: #757761;\n          width: 500px;\n          height: 300px;\n          float: left;\n        }\n    "],
-            template: "\n        <section id=\"sidebar\" [resizable]=\"['right', 'bottom']\">\n            <h2>Sidebar</h2>\n        </section>\n        <section id=\"main\" [resizable]=\"['bottom']\">\n            <h2>Main Content</h2>\n        </section>\n    "
+            styles: ["\n        @import url(\"//fonts.googleapis.com/css?family=Lato:400,300,700\");\n\n        #demo {\n          color: #ffffff;\n          font-family: 'Lato', sans-serif;\n          text-align: center;\n        }\n\n        #sidebar {\n          display: block;\n          background: #51BBFE;\n          width: 260px;\n          max-width: 500px;\n          min-width: 165px;\n          min-height: 300px;\n          margin-right: 15px;\n          float: left;\n        }\n\n        #main {\n          display: block;\n          background: #757761;\n          width: 500px;\n          height: 300px;\n          float: left;\n        }\n    "],
+            template: "\n        <section id=\"demo\">\n            <section id=\"sidebar\" [resizable]=\"['right', 'bottom']\">\n                <h2>Sidebar</h2>\n            </section>\n            <section id=\"main\" [resizable]=\"['bottom']\">\n                <h2>Main Content</h2>\n            </section>\n        </section>\n    "
         }), 
         __metadata('design:paramtypes', [])
     ], ExampleApp);

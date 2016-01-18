@@ -9,7 +9,7 @@ import {Resizable} from 'ng2-resizable/ng2-resizable';
     styles: [`
         @import url("//fonts.googleapis.com/css?family=Lato:400,300,700");
 
-        body {
+        #demo {
           color: #ffffff;
           font-family: 'Lato', sans-serif;
           text-align: center;
@@ -35,11 +35,13 @@ import {Resizable} from 'ng2-resizable/ng2-resizable';
         }
     `],
     template: `
-        <section id="sidebar" [resizable]="['right', 'bottom']">
-            <h2>Sidebar</h2>
-        </section>
-        <section id="main" [resizable]="['bottom']">
-            <h2>Main Content</h2>
+        <section id="demo">
+            <section id="sidebar" [resizable]="['right', 'bottom']">
+                <h2>Sidebar</h2>
+            </section>
+            <section id="main" [resizable]="['bottom']">
+                <h2>Main Content</h2>
+            </section>
         </section>
     `
 })
